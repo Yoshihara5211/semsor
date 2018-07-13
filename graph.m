@@ -19,6 +19,7 @@ mkdir 20180713;
 cd 20180713;
 
 %% •Ï”Ši”[
+data = CANSAT;
 t = data(:,1)'/1000;
 lat = data(:,4)';
 lon = data(:,5)';
