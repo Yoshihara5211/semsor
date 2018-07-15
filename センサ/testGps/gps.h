@@ -16,7 +16,7 @@ class Gps {
     // 関数
     Gps();
     ~Gps();
-    HardwareSerial SerialGps = Serial1;
+//    HardwareSerial SerialGps = Serial1;
     TinyGPSPlus tinygps;
     void setupGps();
     void readGps();

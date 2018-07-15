@@ -1,6 +1,6 @@
 close all
 
-%% 書式
+% 書式
 % GUIのフォント
 set(0, 'defaultUicontrolFontName', 'MS UI Gothic');
 % 軸のフォント
@@ -14,22 +14,21 @@ set(0, 'defaultAxesFontSize', 14);
 % タイトル、注釈などのフォントサイズ
 set(0, 'defaultTextFontSize', 14);
 
-%% 保存フォルダ
-mkdir 20180713;
-cd 20180713;
+% 保存フォルダ
+mkdir 20180715;
+cd 20180715;
 
 %% 変数格納
-data = CANSAT;
 t = data(:,1)'/1000;
 lat = data(:,4)';
 lon = data(:,5)';
 acc = data(:,6:8)';
 
-%% 描画
+% 描画
 
 % 加速度
 figure(1)
-plot(t,acc,'LineWidth',2)    
+plot(t,acc/9.8,'LineWidth',2)    
 xlabel('Time [s]');
 ylabel('Acceleration [m/s^2]', 'FontName','Times New Roman');
 legend('x','y','z')

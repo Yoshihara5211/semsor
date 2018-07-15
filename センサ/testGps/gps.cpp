@@ -12,9 +12,9 @@ Gps::~Gps() {
 }
 
 void Gps::setupGps() {
-  SerialGps.begin(9600);
-  while (SerialGps.available() > 0) {
-    char c = SerialGps.read();
+  Serial1.begin(9600);
+  if (Serial1.available() > 0) {
+    char c = Serial1.read();
     tinygps.encode(c);
     if (tinygps.date.isValid()) {
       year = tinygps.date.year();
@@ -29,9 +29,9 @@ void Gps::setupGps() {
 }
 
 void Gps::readGps() {
-  SerialGps.begin(9600);
-  while (SerialGps.available()) {
-    char c = SerialGps.read();
+  Serial1.begin(9600);
+  if (Serial1.available()) {
+    char c = Serial1.read();
     tinygps.encode(c);
 
     if (tinygps.location.isValid()) {
@@ -67,6 +67,7 @@ void Gps::readGps() {
               + String(alt) + "，";
     Serial.println(gpsDate);
   }
-  if (millis() > 5000 && tinygps.charsProcessed() < 10)
+  else if  (millis() > 5000 && tinygps.charsProcessed() < 10){
     Serial.println(F("No GPS data received: check wiring"));
+  }
 }
