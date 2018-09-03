@@ -54,32 +54,32 @@ s = 0:0.01:2*pi;
 figure(3)
 x = distance .* sin(45*(direct-1)*pi/180);
 y = distance .* -cos(45*(direct-1)*pi/180);
-if (time>=0 && time<27) {
-plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
-hold on
-}
-if (time>=27 && time<27*2) {
-plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.2]);
-hold on
-}
-if (time>=27*2 && time<27*3) {
-plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.3]);
-hold on
-}
-if (time>=27*3 && time<27*4) {
-plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
-hold on
-} 
-if (time>=27*4 && time<27*5) {
-plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
-hold on
-} 
-if (time>=27*5 && time<27*6) {
-plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
-hold on
-} 
+% if (time>=0 && time<27) {
 % plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
 % hold on
+% }
+% if (time>=27 && time<27*2) {
+% plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.2]);
+% hold on
+% }
+% if (time>=27*2 && time<27*3) {
+% plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.3]);
+% hold on
+% }
+% if (time>=27*3 && time<27*4) {
+% plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
+% hold on
+% } 
+% if (time>=27*4 && time<27*5) {
+% plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
+% hold on
+% } 
+% if (time>=27*5 && time<27*6) {
+% plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
+% hold on
+% } 
+plot(x,y,'b:o','LineWidth',2,'MarkerEdgeColor',[0,0,0.1]);
+hold on
 plot(500*cos(s),500*sin(s),'k');
 hold on
 plot(0,0,'rp','MarkerSize',10);
