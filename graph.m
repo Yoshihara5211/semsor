@@ -88,4 +88,4 @@ xlabel('West<------>East[cm]');
 ylabel('South<------>North[cm]');
 axis([-500 500 -500 500]);
 grid on
-saveas(gcf, 'Self Position Estimation')
+saveas(gcf, 'Self Position Estimation.jpg')
